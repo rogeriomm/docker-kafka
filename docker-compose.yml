@@ -9,7 +9,7 @@ version: "3.8"
 services:
   zookeeper-1:
     container_name: zookeeper-1
-    image: $USERNAME/zookeeper:2.7.0
+    image: ${USERNAME}/zookeeper:2.7.0
     build:
       context: ./zookeeper
     volumes:
@@ -19,7 +19,7 @@ services:
 
   kafka-1:
     container_name: kafka-1
-    image: $USERNAME/kafka:2.7.0
+    image: ${USERNAME}/kafka:2.7.0
     build:
       context: .
     volumes:
@@ -31,7 +31,7 @@ services:
 
   kafka-2:
     container_name: kafka-2
-    image: $USERNAME/kafka:2.7.0
+    image: ${USERNAME}/kafka:2.7.0
     build:
       context: .
     volumes:
@@ -42,7 +42,7 @@ services:
 
   kafka-3:
     container_name: kafka-3
-    image: $USERNAME/kafka:2.7.0
+    image: ${USERNAME}/kafka:2.7.0
     build:
       context: .
     volumes:
@@ -53,7 +53,7 @@ services:
 
   kafka-producer:
     container_name: kafka-producer
-    image: $USERNAME/kafka:2.7.0
+    image: ${USERNAME}/kafka:2.7.0
     build:
       context: .
     working_dir: /kafka
@@ -65,7 +65,7 @@ services:
 
   kafka-consumer:
     container_name: kafka-consumer
-    image: $USERNAME/kafka:2.7.0
+    image: ${USERNAME}/kafka:2.7.0
     build:
       context: .
     working_dir: /kafka
